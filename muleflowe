@@ -19,7 +19,7 @@ or Second way is :- Use a expression component to start a flow ... here flow1 is
   </expression-component>
 
 
-using groovy we can stop  a flow for sertain seconds
+using groovy we can stop  a flow for certain seconds
 using script groovy 
 sleep(10000)-->milliseconds
 System.out.println("holding the flow for 10 seconds");
