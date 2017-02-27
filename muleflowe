@@ -1,0 +1,26 @@
+How to stop or start a flow.
+
+There is 2 ways to do in runtime:- 1) Use Groovy component to start a flow :-
+
+<scripting:component>
+    <scripting:script engine="groovy">
+        muleContext.registry.lookupFlowConstruct('targetFlow').start()
+    </scripting:script>
+</scripting:component>
+
+where targetFlow is the name of the flow you need to start
+
+or Second way is :- Use a expression component to start a flow ... here flow1 is the name of the flow to start :-
+
+<expression-component>
+
+    app.registry.flow1.start();
+
+  </expression-component>
+
+
+using groovy we can stop  a flow for sertain seconds
+using script groovy 
+sleep(10000)-->milliseconds
+System.out.println("holding the flow for 10 seconds");
+return message.payload;
