@@ -1,0 +1,33 @@
+install chocolte for windows
+
+@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
+
+
+git merge --abort is equivalent to git reset --merge when MERGE_HEAD is present.
+
+This will unstage all files you might have staged with git add:
+git reset
+This will revert all local uncommitted changes (should be executed in repo root):
+
+git checkout .
+You can also revert uncommitted changes only to particular file or directory:
+
+git checkout [some_dir|file.txt]
+Yet another way to revert all uncommitted changes (longer to type, but works from any subdirectory):
+git reset --hard HEAD
+This will remove all local untracked files, so only git tracked files remain:
+
+git clean -fdx
+WARNING: -x will also remove all ignored files!
+
+New branches are created with the command
+$ git branch branchname
+By default this branch is a copy of the current branch (the one you were at when running the command) at HEAD. You can also create a copy that only includes changes up to a certain commit by adding the SHA of the commit:
+$ git branch branchname commit-SHA
+To list all existing branches use:
+git branch
+
+This also shows the branch you are currently on, marked with an asterisk next to the name.
+
+To delete a branch, use
+$ git branch -d branchname
