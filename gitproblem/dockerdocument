@@ -82,3 +82,11 @@ adding user to sudo group
 sudo gpasswd -a prasanna sudo
 
 https://jvns.ca/blog/2017/04/01/slow-down-your-internet-with-tc/
+
+
+to show the process accociated with an Ip address
+netstat -nap | grep 8005
+it will give the ID of that process
+29394
+
+sudo kill -9 29394 ====> it will kill the process
